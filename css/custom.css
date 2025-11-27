@@ -1,0 +1,29 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+/* Montserrat Font - Global */
+body,
+html,
+* {
+	font-family: 'Montserrat', sans-serif !important;
+}
+
+.gosharp-color {
+	color: #0f4260;
+}
+
+.gosharp-color-2 {
+	color: #ee4e1a;
+}
+
+.bg-gosharp-color {
+	background-color: #0f4260;
+}
+
+.bg-gosharp-color-2 {
+	background-color: #ee4e1a;
+}
