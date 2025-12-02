@@ -7,7 +7,11 @@
 
 /* Montserrat Font - Global */
 body,
-html,
+html {
+	font-family: 'Montserrat', sans-serif !important;
+	scroll-behavior: smooth !important;
+}
+
 * {
 	font-family: 'Montserrat', sans-serif !important;
 }
@@ -26,4 +30,432 @@ html,
 
 .bg-gosharp-color-2 {
 	background-color: #ee4e1a;
+}
+
+/* Contact Form Styling */
+#contact-form .form-control {
+	background-color: transparent;
+	border-color: #ddd;
+	padding: 0.75rem 0;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+#contact-form .form-control:focus {
+	background-color: transparent;
+	border-color: #ee4e1a;
+	box-shadow: none;
+	color: #0f4260;
+}
+
+#contact-form .form-control::placeholder {
+	color: #999;
+	font-weight: 400;
+}
+
+#contact-form .button {
+	border: none;
+	font-size: 1rem;
+	padding: 12px 40px;
+	transition: all 0.3s ease;
+}
+
+#contact-form .button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(238, 78, 26, 0.3);
+}
+
+/* CTA Banner Section */
+.cta-banner {
+	background:  #e7eff3;
+	padding: 4rem 0;
+}
+
+.cta-banner h2 {
+	color: #0f4260;
+	line-height: 1.3;
+	margin-bottom: 2rem;
+}
+
+/* Benefits List */
+.benefits-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.benefit-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: #0f4260;
+}
+
+.benefit-item i {
+	font-size: 1.5rem;
+	color: #ee4e1a;
+	flex-shrink: 0;
+}
+
+.cta-banner-image-wrapper {
+	position: relative;
+	border-radius: 16px;
+	display: inline-block;
+	width: 80%;
+	overflow: visible;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.cta-banner-image {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	border-radius: 16px;
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.cta-banner-overlay {
+	position: absolute;
+	bottom: 20%;
+	right: -25%;
+	max-width: 70%;
+	height: auto;
+	object-fit: contain;
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* CTA Banner Column */
+.cta-banner .col-lg-6:last-child {
+	overflow: hidden;
+}
+
+/* Use Cases Images */
+#canvas-tabs-tabContent img {
+	border-radius: 10px;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+	.cta-banner {
+		padding: 3rem 0;
+	}
+
+	.cta-banner h2 {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.benefit-item {
+		font-size: 1rem;
+	}
+
+	.benefit-item i {
+		font-size: 1.25rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.cta-banner {
+		padding: 2.5rem 0;
+	}
+
+	.cta-banner .row {
+		flex-direction: column;
+	}
+
+	.cta-banner-image {
+		margin-top: 2rem;
+	}
+
+	.cta-banner h2 {
+		font-size: 1.75rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.benefits-list {
+		gap: 1rem;
+	}
+
+	.benefit-item {
+		font-size: 0.95rem;
+	}
+
+	.benefit-item i {
+		font-size: 1.2rem;
+	}
+}
+
+/* Network Container with Concentric Circles */
+.network-container {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	max-width: 700px;
+	margin: 3rem auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Concentric dashed circles */
+.network-circle {
+	position: absolute;
+	border: 2px dashed #ddd;
+	border-radius: 50%;
+	animation: rotateCircle 20s linear infinite;
+}
+
+.circle-1 {
+	width: 250px;
+	height: 250px;
+}
+
+.circle-2 {
+	width: 400px;
+	height: 400px;
+	animation-duration: 25s;
+	animation-direction: reverse;
+}
+
+.circle-3 {
+	width: 550px;
+	height: 550px;
+	animation-duration: 30s;
+}
+
+@keyframes rotateCircle {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Center Node */
+.network-center {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	border: 3px solid #0f4260;
+	border-radius: 50%;
+	z-index: 20;
+	box-shadow: 0 8px 24px rgba(15, 66, 96, 0.2);
+	animation: centerPulse 3s ease-in-out infinite;
+}
+
+@keyframes centerPulse {
+	0%, 100% {
+		box-shadow: 0 8px 24px rgba(15, 66, 96, 0.2);
+		transform: scale(1);
+	}
+	50% {
+		box-shadow: 0 12px 32px rgba(238, 78, 26, 0.3);
+		transform: scale(1.08);
+	}
+}
+
+.center-logo {
+	max-width: 60px;
+	height: auto;
+	margin-bottom: 0.25rem;
+}
+
+.center-text {
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: #0f4260;
+	margin: 0;
+}
+
+/* Integration Nodes positioned in a circle */
+.integration-node {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	border: 2px solid #0f4260;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 10;
+	box-shadow: 0 4px 12px rgba(15, 66, 96, 0.1);
+}
+
+.integration-node:hover {
+	border-color: #ee4e1a;
+	box-shadow: 0 8px 20px rgba(238, 78, 26, 0.3);
+	transform: scale(1.12);
+	background: #fff5f0;
+}
+
+.node-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+.integration-logo {
+	max-width: 50px;
+	height: auto;
+	margin-bottom: 0.5rem;
+	object-fit: contain;
+}
+
+.integration-node i {
+	font-size: 2rem;
+	color: #0f4260;
+	margin-bottom: 0.25rem;
+	transition: color 0.3s ease;
+}
+
+.integration-node p {
+	font-size: 0.65rem;
+	font-weight: 600;
+	color: #0f4260;
+	margin: 0;
+	transition: color 0.3s ease;
+	line-height: 1.2;
+}
+
+.integration-node:hover p {
+	color: #ee4e1a;
+}
+
+/* Position nodes evenly spaced in a perfect circle - 45° apart */
+.node-1 { top: 11%; left: 50%; } /* 0° - Top */
+.node-2 { top: 22%; right: 10%; } /* 45° - Top Right */
+.node-3 { top: 50%; right: 15%; } /* 90° - Right */
+.node-4 { top: 78%; right: 18%; } /* 135° - Bottom Right */
+.node-5 { bottom: 11%; left: 45%; } /* 180° - Bottom */
+.node-6 { top: 79%; left: 20%; } /* 225° - Bottom Left */
+.node-7 { top: 50%; left: 15%; } /* 270° - Left */
+.node-8 { top: 22%; left: 10%; } /* 315° - Top Left */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.network-container {
+		height: 500px;
+		max-width: 500px;
+	}
+
+	.circle-1 {
+		width: 180px;
+		height: 180px;
+	}
+
+	.circle-2 {
+		width: 300px;
+		height: 300px;
+	}
+
+	.circle-3 {
+		width: 420px;
+		height: 420px;
+	}
+
+	.network-center {
+		width: 100px;
+		height: 100px;
+	}
+
+	.center-logo {
+		max-width: 50px;
+	}
+
+	.center-text {
+		font-size: 0.7rem;
+	}
+
+	.integration-node {
+		width: 70px;
+		height: 70px;
+	}
+
+	.integration-node i {
+		font-size: 1.5rem;
+	}
+
+	.integration-node p {
+		font-size: 0.55rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.network-container {
+		height: 400px;
+		max-width: 100%;
+	}
+
+	.circle-1 {
+		width: 140px;
+		height: 140px;
+	}
+
+	.circle-2 {
+		width: 220px;
+		height: 220px;
+	}
+
+	.circle-3 {
+		width: 300px;
+		height: 300px;
+	}
+
+	.network-center {
+		width: 80px;
+		height: 80px;
+	}
+
+	.center-logo {
+		max-width: 40px;
+	}
+
+	.center-text {
+		font-size: 0.6rem;
+	}
+
+	.integration-node {
+		width: 60px;
+		height: 60px;
+	}
+
+	.integration-node i {
+		font-size: 1.25rem;
+	}
+
+	.integration-node p {
+		font-size: 0.5rem;
+	}
+
+	/* Perfect circle - 45° apart */
+	.node-1 { top: 10%; left: 50%}
+	.node-2 { top: 18%; right: 8%; }
+	.node-3 { top: 50%; right: 10%}
+	.node-4 { top: 82%; right: 8%; }
+	.node-5 { bottom: 10%; left: 50%}
+	.node-6 { top: 62%; left: 8%; }
+	.node-7 { top: 50%; left: 10%}
+	.node-8 { top: 18%; left: 8%; }
 }
