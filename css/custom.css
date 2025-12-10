@@ -8,12 +8,14 @@
 /* Montserrat Font - Global */
 body,
 html {
-	font-family: 'Montserrat', sans-serif !important;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif !important;
 	scroll-behavior: smooth !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
-	font-family: 'Montserrat', sans-serif !important;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
 
 .gosharp-color {
